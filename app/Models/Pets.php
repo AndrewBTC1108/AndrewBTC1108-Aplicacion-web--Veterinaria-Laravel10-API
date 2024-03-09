@@ -18,7 +18,6 @@ class Pets extends Model
         'sex',
         'user_id'
     ];
-<<<<<<< HEAD
     /*
     * a pet can has many Histories
     * $pet = Pet::find($id)
@@ -48,19 +47,4 @@ class Pets extends Model
     {
         return $this->hasMany(SurgicalProcedures::class, 'pet_id')->select(['id', 'name', 'date', 'pet_id']);
     }
-=======
-    // Obtener el user al que pertenece un pet
-    // $pet = Pet::find(1);
-    // $user = $pet->users;
-    //establece la relación inversa, indicando que un pet pertenece a un user.
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    // public function appointments()
-    // {
-    //     return $this->hasMany(Appointments::class, 'pet_id');
-    // }
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
 }

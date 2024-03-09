@@ -4,12 +4,6 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-<<<<<<< HEAD
-=======
-use App\Http\Resources\AppointmentsResources\HourResource;
-use App\Http\Resources\AppointmentsResources\PetsResource;
-use App\Http\Resources\AppointmentsResources\UserResource;
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
 
 class AppointmentsResource extends JsonResource
 {
@@ -27,19 +21,11 @@ class AppointmentsResource extends JsonResource
     {
         return [
             'id' => $this->id,
-<<<<<<< HEAD
             'pet_id' => $this->whenLoaded('pet'),
             'date' => $this->date,
             'hour_id' => $this->whenLoaded('hour'),
             'reason' => $this->reason,
             'user_id' => $this->whenLoaded('user')
-=======
-            'pet_id' => new PetsResource($this->whenLoaded('pet')),
-            'date' => $this->date,
-            'hour_id' => new HourResource($this->whenLoaded('hour')),
-            'reason' => $this->reason,
-            'user_id' => new UserResource($this->whenLoaded('user'))
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
         ];
     }
 }

@@ -15,19 +15,11 @@ class PetsSeeder extends Seeder
     public function run(): void
     {
         //Llamamos el Factory de User para Crear usuarios
-<<<<<<< HEAD
         $users = User::factory()->count(3000)->create();
 
         // Para cada usuario, crea 2 o 3 mascotas
         $users->each(function ($user) {
             Pets::factory()->count(rand(1, 2))->create(['user_id' => $user->id]);
-=======
-        $users = User::factory()->count(50)->create();
-
-        // Para cada usuario, crea 2 o 3 mascotas
-        $users->each(function ($user) {
-            Pets::factory()->count(rand(4, 6))->create(['user_id' => $user->id]);
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
         });
     }
 }

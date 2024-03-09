@@ -55,12 +55,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Pets::class);
     }
-<<<<<<< HEAD
-=======
-    //relación "uno a muchos", indicando que un user puede tener muchos appointments.
-    public function appointments()
-    {
-        return $this->hasMany(Appointments::class);
-    }
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
 }

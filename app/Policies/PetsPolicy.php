@@ -39,11 +39,7 @@ class PetsPolicy
     public function update(User $user, Pets $pets): bool
     {
         //solo un usuario que tenga el mismo id de pet->user_id y que no sea doctor puede editar
-<<<<<<< HEAD
         return $user->id === $pets->user_id || $user->admin && !$user->doctor;
-=======
-        return $user->id === $pets->user_id && !$user->doctor;
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
     }
 
     /**
@@ -52,11 +48,7 @@ class PetsPolicy
     public function delete(User $user, Pets $pets): bool
     {
         //solo un usuario que tenga el mismo id de pet->user_id y que no sea doctor puede eliminar
-<<<<<<< HEAD
         return $user->id === $pets->user_id || $user->admin && !$user->doctor;
-=======
-        return $user->id === $pets->user_id && !$user->doctor;
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
     }
 
     /**

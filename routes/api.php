@@ -15,10 +15,8 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
-<<<<<<< HEAD
 use App\Http\Controllers\MedicalHistoriesController;
-=======
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,16 +49,12 @@ Route::middleware(['auth:sanctum'])->group( function() {
     Route::apiResource('/pets', PetsController::class);
 
     Route::apiResource('/appointments', AppointmentsController::class);
-<<<<<<< HEAD
     Route::apiResource('/medicalHistories', MedicalHistoriesController::class);
-=======
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
 
     //obtener horas y mascotas
     Route::get('/hours', [HoursPetsController::class, 'hours']);
     Route::get('/availablePets', [HoursPetsController::class, 'pets']);
 
-<<<<<<< HEAD
     //obtener los usuarios
     //solo algunas rutas necesitan un límite de solicitudes más alto se pueden excluir estas rutas del middleware
     //el middleware indica que se permiten hasta 100 solicitudes por minuto. solo para esta ruta
@@ -68,12 +62,6 @@ Route::middleware(['auth:sanctum'])->group( function() {
 
 });
 //access to this route does not require authentication.
-=======
-});
-
-Route::get('/users', UsersController::class);
-
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
 Route::get('/verify-email/{id}/{hash}', VerifyEmailController::class)
                 ->middleware(['signed', 'throttle:6,1'])
                 ->name('verification.verify');

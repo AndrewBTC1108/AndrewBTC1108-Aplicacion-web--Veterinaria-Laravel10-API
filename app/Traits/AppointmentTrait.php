@@ -26,15 +26,9 @@ trait AppointmentTrait
     public function checkPendigAppointment($petId, $userId) : bool
     {
         return Appointments::where('pet_id', $petId)
-<<<<<<< HEAD
             ->where('user_id', $userId)
             ->where('status', 0)
             ->exists();
-=======
-        ->where('user_id', $userId)
-        ->where('status', 0)
-        ->exists();
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
     }
 
     public function generateErrorResponse($message, $status)

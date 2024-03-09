@@ -21,16 +21,12 @@ class PetsResource extends JsonResource
             'species' => $this->species,
             'breed' => $this->breed,
             'color' => $this->color,
-<<<<<<< HEAD
             'sex' => $this->sex,
             'medical_histories' => $this->whenLoaded('medical_histories'),
             'vaccines' => $this->whenLoaded('vaccines'),
             'previous_treatments' => $this->whenLoaded('previous_treatments'),
             'deworming' => $this->whenLoaded('deworming'),
             'surgical_procedures' => $this->whenLoaded('surgical_procedures')
-=======
-            'sex' => $this->sex
->>>>>>> 7f20fff735029ec9d7cbfda01afde5a4eb380afc
         ];
     }
 }
